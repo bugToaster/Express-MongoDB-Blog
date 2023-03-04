@@ -1,0 +1,23 @@
+<%- include('../partials/header'); -%>
+
+
+<div class="container-fluid my-5">
+    <div class="row">
+
+        <% if (!articles || articles.length === 0) { %>
+            <p>No articles yet.</p>
+        <% } else if (Array.isArray(articles)) { %>
+            <% articles.forEach((article, index) => { %>
+                <div class="col-md-4 mb-5">
+                    <h3> <%=index+1%>) <%= article.title %></h3>
+                    <p><%= article.content.slice(0,100) %></p>
+                    <a href="/article-details/<%=article._id%>">Read More</a>
+                </div>
+            <% }); %>
+        <% } %>
+
+    </div>
+</div>
+
+
+<%- include('../partials/footer'); -%>

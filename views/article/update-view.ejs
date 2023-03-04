@@ -1,0 +1,28 @@
+<%- include('../partials/header'); -%>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">Article Create</h3>
+
+        <form method="post" action="/article-create">
+
+            <div class="form-group">
+                <label for="title">Article Title</label>
+                <input type="text" name="title" class="form-control" id="title" aria-describedby="titleHelp"
+                       placeholder="Enter Title">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Article Content</label>
+                <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+
+    </div>
+</div>
+
+<%- include('../partials/footer'); -%>
